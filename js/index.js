@@ -25,8 +25,6 @@ function transferComplete(event) {
 
         CreateVoyage(desti);
     });
-
-    tablePopulate(json);
 }
 
 function transferFailed(event) {
@@ -37,39 +35,7 @@ function transferCancel(event) {
     alert("transfert annulé");
 }
 
-function tablePopulate(json) {
 
-    let tabkey = Object.keys(json[0]);
-    createHeaderTab(tabkey);
-    /*     console.log(obj); */
-
-    json.forEach(function(desti) {
-
-        addRow(desti);
-    });
-
-}
-
-function addRow(desti) {
-    let tr = document.createElement('tr');
-
-    Object.entries(desti).forEach(([key, value]) => {
-        let td = document.createElement('td');
-        td.innerHTML = value;
-        tr.appendChild(td);
-    });
-    tab.appendChild(tr);
-}
-
-function createHeaderTab(tabkey) {
-    let tr = document.createElement('tr');
-    tabkey.forEach(function(key) {
-        let th = document.createElement('th');
-        th.innerHTML = key;
-        tr.appendChild(th);
-    })
-    tab.appendChild(tr);
-}
 
 function CreateVoyage(desti) {
     let article = document.createElement('article');
