@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+#cardvoyage {
+    display: flex;
+    flex-direction: column;
+}
+
+#divsdecript {
+    display: flex;
+    flex-direction: column;
+    width: 25em;
+}
+
+#titreart {}
+
+#divcorp {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#imgvoyage {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+#descrip {}
+
+#butRead {
+    width: 75px;
+    height: 50px;
+    align-self: flex-end;
+}
